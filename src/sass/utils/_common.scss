@@ -1,0 +1,59 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  color: $text-color;
+  background-color: $white;
+
+  // @media screen and (min-width: 320px) {
+  //   padding-top: 58px;
+  // }
+
+  // @media screen and (min-width: 768px) {
+  //   padding-top: 82px;
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   padding-top: 87px;
+  // }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+}
+
+svg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

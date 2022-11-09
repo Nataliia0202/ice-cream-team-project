@@ -1,0 +1,345 @@
+// Марина
+.hero {
+  background-color: $bg-color;
+}
+
+.hero__container {
+  // BG-Images for mobile markup
+  @media screen and (max-width: 767.98px) {
+    padding-top: 194px;
+    padding-bottom: 158px;
+
+    background-image: url(/src/images/hero/ice-cream1x-mobile.png),
+      url(/src/images/hero/ellipse1x-mobile.png);
+    background-size: 171px 410px, 284px 344px;
+    background-repeat: no-repeat;
+    background-position: right 32px bottom 0px, left 36px bottom 75px;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/hero/ice-cream2x-mobile.png),
+        url(/src/images/hero/ellipse2x-mobile.png);
+    }
+  }
+
+  // BG-Images for tablet markup
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    overflow: visible;
+
+    padding-top: 102px;
+    padding-bottom: 56px;
+    position: relative;
+
+    background-image: url(/src/images/hero/dote1x-tablet.png),
+      url(/src/images/hero/dote1x-tablet.png),
+      url(/src/images/hero/girl1x-tablet.png),
+      url(/src/images/hero/milk1x-tablet.png),
+      url(/src/images/hero/ice-cream1x-tablet.png),
+      url(/src/images/hero/ellipse1x-tablet.png);
+
+    background-size: 16px 16px, 16px 16px, 190px 150px, 152px 154px, 143px 336px,
+      335px 333px;
+
+    background-repeat: no-repeat;
+
+    background-position: right 32px bottom 308px, right 32px bottom 248px,
+      right 32px bottom 0px, left 32px bottom 16px, right 303px bottom 0px,
+      right 185px bottom 40px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/hero/dote2x-tablet.png),
+        url(/src/images/hero/dote2x-tablet.png),
+        url(/src/images/hero/girl2x-tablet.png),
+        url(/src/images/hero/milk2x-tablet.png),
+        url(/src/images/hero/ice-cream2x-tablet.png),
+        url(/src/images/hero/ellipse2x-tablet.png);
+    }
+  }
+
+  // BG-Images for desktop markup
+
+  @media screen and (min-width: 1200px) {
+    overflow: visible;
+
+    padding-top: 147px;
+    padding-bottom: 84px;
+    position: relative;
+
+    background-image: url(/src/images/hero/dote1x-desktop.png),
+      url(/src/images/hero/dote1x-desktop.png),
+      url(/src/images/hero/girl1x-desktop.png),
+      url(/src/images/hero/milk1x-desktop.png),
+      url(/src/images/hero/ice-cream1x-desktop.png),
+      url(/src/images/hero/ellipse1x-desktop.png);
+
+    background-size: 30px 30px, 30px 30px, 304px 241px, 213px 216px, 236px 557px,
+      534px 534px;
+
+    background-repeat: no-repeat;
+
+    background-position: right 19px bottom 482px, right 19px bottom 390px,
+      right 29px bottom 0px, left 16px bottom 60px, right 348px bottom 0px,
+      right 172px bottom 80px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(/src/images/hero/dote2x-desktop.png),
+        url(/src/images/hero/dote2x-desktop.png),
+        url(/src/images/hero/girl2x-desktop.png),
+        url(/src/images/hero/milk2x-desktop.png),
+        url(/src/images/hero/ice-cream2x-desktop.png),
+        url(/src/images/hero/ellipse2x-desktop.png);
+    }
+  }
+}
+
+.hero__title {
+  display: block;
+  max-width: 218px;
+  margin-bottom: 20px;
+
+  font-family: 'Titan One';
+  @include font(400, 26px, 1.15, 0.04em);
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    @include font(400, 22px, 1.14, 0.04em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 277px;
+    margin-bottom: 24px;
+
+    @include font(400, 38px, 1.16, 0.04em);
+  }
+
+  text-transform: uppercase;
+
+  color: $white;
+}
+
+.hero__focus {
+  font-family: inherit;
+  @include font(400, 48px, 0.96, 0.04em);
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    @include font(400, 34px, 0.91, 0.04em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(400, 58px, 0.91, 0.04em);
+  }
+  text-transform: inherit;
+
+  color: $brand-color;
+}
+
+.hero__list {
+  display: flex;
+
+  gap: 8px;
+  @media screen and (min-width: 1200px) {
+    gap: 15px;
+  }
+}
+
+.hero__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 24px;
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 20px;
+
+  cursor: pointer;
+  @include font(400, 8px, 1.25, 0.04em);
+
+  @media screen and (min-width: 1200px) {
+    height: 40px;
+    padding: 0 21px;
+
+    @include font(400, 14px, 1.29, 0.04em);
+  }
+
+  &--product {
+    color: $white;
+    background-color: $brand-color;
+    &:hover,
+    &:focus {
+      background-color: $hover-bg-accent-color;
+    }
+  }
+
+  &--made {
+    color: $brand-color;
+    background-color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $hover-bg-color;
+    }
+  }
+}
+
+.hero__descr {
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    margin-top: 61px;
+    margin-left: 164px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 108px;
+    margin-left: 220px;
+  }
+}
+
+.hero__text {
+  display: block;
+  flex-wrap: wrap;
+  color: $white;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    max-width: 114px;
+    margin-bottom: 7px;
+
+    @include font(400, 8px, 1.5, 0.04em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 200px;
+    margin-bottom: 20px;
+
+    @include font(400, 14px, 1.4, 0.04em);
+  }
+}
+
+.hero__btn {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 26px;
+    height: 26px;
+  }
+
+  border-radius: 50%;
+  border: none;
+  background-color: $white;
+
+  &:active {
+    box-shadow: 0px 3px 1px rgba(114, 8, 47, 0.12),
+      0px 1px 2px rgba(120, 5, 45, 0.12), 0px 2px 2px rgba(157, 25, 54, 0.12);
+  }
+
+  &--icon {
+    margin-left: auto;
+    margin-right: auto;
+    fill: $brand-color;
+  }
+}
+
+.hero__features {
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    display: block;
+    padding-top: 3px;
+    padding-right: 9px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 7px;
+    padding-right: 18px;
+  }
+
+  &--cafes {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      width: 43px;
+      height: 44px;
+
+      bottom: 280px;
+      right: 32px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 72px;
+      height: 77px;
+
+      bottom: 435px;
+      right: 19px;
+    }
+  }
+
+  &--trucks {
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+      width: 53px;
+      height: 43px;
+
+      bottom: 221px;
+      right: 32px;
+
+      text-align: end;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 93px;
+      height: 76px;
+
+      bottom: 344px;
+      right: 19px;
+    }
+  }
+}
+
+.hero__subtitle {
+  display: block;
+
+  text-align: end;
+
+  font-family: 'Titan One';
+
+  color: $brand-color;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    @include font(400, 28px, 1.14, 0.04em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(400, 46px, 1.15, 0.04em);
+  }
+}
+
+.features__text {
+  display: block;
+  text-align: center;
+  font-family: 'DM Sans';
+  color: $white;
+  text-align: end;
+
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    @include font(400, 8px, 1.25, null);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font(400, 14px, 1.29, null);
+  }
+}

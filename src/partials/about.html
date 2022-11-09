@@ -1,0 +1,59 @@
+<!-- Наталия -->
+<section class="about section" id="about">
+    <div class="container">
+    <p class="about__label" data-aos="zoom-out">tradition and love</p>
+    <h2 class="about__titel" data-aos="zoom-out">how it’s made?</h2>
+    <div class="about__picture">
+    <picture>
+        <source srcset="./images/about/milka1x-descktop.png 1x, ./images/about/milka2x-descktop.png 2x" type="image/png" media="(min-width: 1200px)" >
+        <source srcset="./images/about/milka1x-tablet.png 1x, ./images/about/milka2x-tablet.png 2x" type="image/png" media="(min-width: 768px)">
+        <source srcset="./images/about/milka1x-mobile.png 1x, ./images/about/milka2x-mobile.png 2x" type="image/png" media="(min-width: 320px)">
+        <img class="about__img" src="./images/about/milka1x-mobile.png" alt="Milka" data-aos="zoom-in"/>
+        
+    </picture>
+    <div class="about__wrap">
+        <p class="about__text">
+            The secret of ice cream from "Icecream" is the use of only natural products and their balanced combination. The production of ice cream for children comes with a reduced amount of sugar, and in ice cream and other desserts for those who follow their figure, it is completely excluded.
+        </p>
+
+        <p class="about__text about__text--color">
+            We purchase fresh milk, cream and butter and thoroughly test them in our internationally certified laboratory. Thanks to this, we can confidently say that we care about the quality of our products. That's why our ice cream is so delicious!
+        </p>
+
+        <p class="about__text about__text--color">
+            Our ice cream is the healthiest!
+        </p>
+        <button type="button" class="about__button" data-modal-open>Read more
+            <svg class="about__icon">
+                <use href="./images/icons.svg#icon-right" ></use>
+            </svg>
+        </button>
+    </div>
+    </div>
+    </div>
+</section>
+<!-------------Modal window---------------->
+<div class="backdrop is-hidden" data-modal>
+    <div class="about-modal">
+        <button class="about-modal__btn" data-modal-close>
+            <svg class="about-modal__icon">
+                <use href="./images/icons.svg#icon-cross"></use>
+            </svg>
+        </button>
+        <div class="about-form">
+        <p class="about-modal__titel">
+            Manufacturing process
+        </p>
+        <ul class="about-modal__list">
+            <li class="about-modal__item">Fold and mix the mixture</li>
+            <li class="about-modal__item">Pasteurization of the mixture</li>
+            <li class="about-modal__item">Filtration</li>
+            <li class="about-modal__item">Homogenization of the mixture</li>
+            <li class="about-modal__item">Cooling and ripening (at least 4 hours)</li>
+            <li class="about-modal__item">Freezing - whipping and partial freezing</li>
+            <li class="about-modal__item">Tempering of ice cream at t -40℃</li>
+            <li class="about-modal__item">Ice cream packaging</li>
+        </ul>
+        </div>
+    </div> 
+</div>  

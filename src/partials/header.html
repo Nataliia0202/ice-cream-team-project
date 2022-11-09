@@ -1,0 +1,76 @@
+<!-- Сергей -->
+<header class="header" id="header">
+  <div class="header__container container">
+    <a class="header__link" href="./index.html">
+      <svg class="header__logo" width="199" height="50">
+        <use href="./images/icons.svg#icon-logo"></use>
+      </svg>
+    </a>
+
+    <!-- Menu -->
+    <div class="header__menu" id="menu" data-menu>
+      <!-- Modal button -->
+      <button
+        class="modal__btn modal__btn--menu"
+        type="button"
+        aria-expanded="false"
+        aria-label="Button buy now"
+        data-open-modal
+      >
+        Buy now
+        <svg class="btn__icon" width="10" height="10">
+          <use href="./images/icons.svg#icon-right"></use>
+        </svg>
+      </button>
+      <!-- Navigation -->
+      <nav class="nav">
+        <ul class="nav__list list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link nav__link--current">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#made" class="nav__link">How it`s made?</a>
+          </li>
+          <li class="nav__item">
+            <a href="#products" class="nav__link">Our products</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Menu button -->
+    <button
+      class="nav__btn"
+      type="button"
+      aria-expanded="false"
+      aria-controls="menu"
+      aria-label="mobile menu toggle button"
+      data-menu-button
+    >
+      <svg class="nav__icon" width="20" height="20">
+        <use class="icon__menu" href="./images/icons.svg#icon-burger"></use>
+        <use class="icon__cross" href="./images/icons.svg#icon-cross"></use>
+      </svg>
+    </button>
+
+    <!-- Modal button -->
+    <button
+      class="modal__btn"
+      type="button"
+      aria-expanded="false"
+      data-open-modal
+      aria-label="Button buy now"
+    >
+      Buy now
+      <svg class="btn__icon" width="10" height="10">
+        <use href="./images/icons.svg#icon-right"></use>
+      </svg>
+    </button>
+  </div>
+</header>

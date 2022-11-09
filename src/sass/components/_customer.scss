@@ -1,0 +1,169 @@
+// Виктория
+.customer .container {
+  @include tablet {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+
+  @include desktop {
+    padding-left: 116px;
+    padding-right: 116px;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.swiper-slide__pic {
+  border-radius: 44px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+
+.customer-article {
+  position: relative;
+  width: 100%;
+  background: $quote-bg-color;
+  padding: 43px 50px 17px 50px;
+
+  @include tablet {
+    padding: 37px 6px 36px 6px;
+  }
+
+  @include desktop {
+    padding: 46px 74px 31px 72px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    margin-top: 16px;
+    width: 32px;
+    height: 4px;
+    top: 100%;
+    right: 50%;
+    transform: translate(50%);
+
+    background: url('/src/images/custom-services/customer-ellipse.svg'),
+      url('/src/images/custom-services/customer-ellipse.svg'),
+      url('/src/images/custom-services/customer-ellipse.svg');
+
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left, center, right;
+  }
+}
+
+.customer-article__text {
+  position: relative;
+  @include font(500, 12px, 255%, null);
+  text-align: center;
+  color: $text-color;
+  z-index: 1;
+
+  padding-left: 15px;
+  padding-right: 8px;
+  background-image: repeating-linear-gradient(
+    $quote-bg-color,
+    $quote-bg-color 29px,
+    $quote-line-color 29px,
+    $quote-line-color 30px
+  );
+
+  @include tablet {
+    padding-left: 44.71px;
+    padding-right: 49.18px;
+    @include font(500, 14px, 216%, 0.04);
+  }
+
+  @include desktop {
+    padding-left: 36px;
+    padding-right: 35px;
+    @include font(500, 16px, 186%, 0.04);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+
+    background-image: url('/src/images/custom-services/quotes.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 54px;
+    height: 40px;
+
+    top: -13px;
+    left: 0px;
+
+    @include tablet {
+      width: 60.35px;
+    }
+
+    @include desktop {
+      width: 54px;
+    }
+  }
+}
+
+.customer-icon {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-icon__item {
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.customer-article__location {
+  @include font(500, 14px, 1.66, null);
+  text-align: center;
+  color: $text-color;
+
+  margin-top: 32px;
+  margin-bottom: 16px;
+
+  @include tablet {
+    @include font(500, 16px, 1.88, null);
+  }
+
+  @include desktop {
+    @include font(500, 20px, 1.85, null);
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #d9d9d9;
+}
+
+.swiper-pagination-bullet-active {
+  content: '';
+  background: url('/src/images/custom-services/icon-home.svg');
+  width: 12.4px;
+  height: 11.84px;
+  border-radius: 0;
+}
